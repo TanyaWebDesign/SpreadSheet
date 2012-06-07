@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Spreadsheet</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type = "text/javascript"></script>
+    <script type="text/javascript" src="js/jquery_spreadsheet.js"></script>
+      
+    <link rel="stylesheet" type="text/css" href="css/jquery_spreadsheet.css">
+  
+    <script type="text/javascript">
+    
+    $(document).ready(function () {  
+         var aData = [ [ "Redwood City", "300", "true" ], [ "San Francisco", "100", "true" ], [ "San Jose", "500", "false" ] ];
+         var oTable = $( "div#contents" ).spreadsheet( 
+          { rows: 0, cols: 0, data: aData, zebra_striped: true, read_only: false, rowheader: true, colheader: true } );
+         oTable.setNumeric( 1, true );
+         $( "div#contents2" ).spreadsheet( 
+          { rows: 10, cols: 10, data: null, zebra_striped: false, read_only: false, rowheader: true, colheader: true } );
+    } );
+ 
+    </script>
+
+  </head>
+  
+  <body>
+      <div style = "margin-bottom: 20px" >
+        Fully functional spreadsheet that can be used on a web page to enter or display data.
+        The only thing you need is a div:<br/>
+        &lt;div id = 'mydiv'&gt&lt;/div&gt <br/>var mySpreadsheet = $( '#mydiv' ).spreadsheet( options );<br/>
+        It's that easy.
+        <ul>
+          <li>Resizable columns</li>
+          <li>Excel-style headers that user or programmer can hide</li>
+          <li>Can be displayed in zebra-striped mode for better presentation</li>
+          <li>Data can be passed to initialize the spreadsheet</li>
+          <li>User or programmer can add and delete rows and columns</li>
+          <li>Unlike other spreadsheets, display only as many rows and columns as you need.
+              Add or delete them in your script as you need, or allow a user to do so.</li>
+          <li>Can be initialized to display-only mode</li>
+          <li>A user can be allowed to see a context menu to customize the spreadsheet</li>
+          <li>Any column is sortable, using string or number sort, depending on the data</li>
+          <li>Data can be deleted, copied, and pasted, from / to a single cell or an entire row, 
+            inside a spreadsheet or between multiple spreadsheets</li>
+          <li>Keyboard interaction (Ctrl+C, Ctrl+V, Enter, and Tab / Shift+Tab keys)</li>
+          <li>The data can be retrieved into a two-dimensional array of strings</li>
+          <li>Multiple spreadsheets can be displayed on a page</li>
+          <li>Fully exposed API</li>
+        </ul>
+        Double-click on a cell to enter data.<br/>
+        Click on headers to select a row or a column.<br/>
+        Use right mouse-click to open a context menu and customize the spreadsheet.
+      </div>
+      <div id = "contents" style = "margin-bottom: 20px">
+      </div>
+      <div id = "contents2">
+      </div>
+      <a href="../spreadsheet.zip"><img src = "img/Download_button.png" style="border-style: none"/></a>
+      <div style = "margin-top: 20px">Questions? Comments? Customization requests? Bugs? <a href="mailto:tanyawebdesign@gmail.com">e-mail me</a>.
+      </div>
+      <table><tr><td>
+        This was a lot of work, so I deserve a free lunch. If you use the spreadsheet and like it, buy me one
+     </td>
+      <td>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="ABMJV6CDNFWTN">
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+      </form>
+      </td>
+      </tr>
+      </table>
+  </body>
+ </html>

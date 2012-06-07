@@ -1,0 +1,80 @@
+table.sp_spreadsheet {
+  border: 1px solid #BAD0EF;
+}
+
+table.sp_spreadsheet td {
+  border: 1px solid #BAD0EF;
+  border-bottom: none;
+  border-right: none;
+  
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+table.sp_spreadsheet tr.sp_rowheader {
+  background-color: #BAD0EF;
+  text-align: center;
+}
+
+table.sp_spreadsheet tr.sp_selected {
+  background-color: #99CCFF;
+}
+
+table.sp_spreadsheet tr.sp_oddrow {
+  background-color: #cccccc;
+}
+
+table.sp_spreadsheet td.sp_colheader {
+  background-color: #BAD0EF;
+  width: 20px;
+  text-align: center;
+}
+
+table.sp_spreadsheet td.sp_selected {
+  background-color: #99CCFF;
+}
+
+table.sp_spreadsheet td.sp_colselected {
+  background-color: #99CCFF;
+}
+
+table.sp_spreadsheet tr.sp_rowheader td:not(:first-child) {
+  width: 100px;
+}
+
+.sp_cell {
+  border-width: 2px;
+}
+
+ul.sp_context {
+  background: #F8F8F8;
+  position: absolute;
+  border: 1px solid black;
+  
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  width: 140px;
+}
+
+ul.sp_context li {
+  width: 130px;
+  float: left;
+  color: black;
+  padding: 2px 2px 2px 2px;
+  font: 12px Arial, Hlevetica, Geneva, sans-serif;
+}
+
+ul.sp_context li:hover {
+  background: #99CCFF;
+  border: 1px solid #99CCFF;
+}
+
+.div.drag_handle {
+  cursor: crosshair;
+}
+
