@@ -441,6 +441,7 @@ $.fn.spreadsheet = function ( options )
       return;
     }
     var thisRow = oSelectedCell.parent();
+    var nThisRow = rows.index( thisRow );
     var cells = thisRow.find( 'td' );
     var nColCount = cells.size();
     var nSelectedInd = cells.index( oSelectedCell );
