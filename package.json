@@ -1,0 +1,39 @@
+{
+  "name": "SpreadSheet",
+  "description": "jquery spreadsheet/grid control",
+  "version": "1.0.0",
+  "keywords": [
+    "jquery",
+    "spreadsheet",
+    "grid",
+    "javascript",
+    "jscript",
+    "html5"
+  ],
+  "maintainers": [
+    {
+      "name": "TanyaWebDesign",
+      "email": "tanyawebdesign@gmail.com",
+      "web": "http://ycode.com/Tanya/portfolio/portfolio.html"
+    }
+  ],
+  "demos": [
+    "http://ycode.com/Tanya/spreadsheet/main.html"
+  ],
+  "dependencies": {
+    "jquery": "1.4.2"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/TanyaWebDesign/SpreadSheet.git"
+    }
+  ],
+  "licenses": [
+    {
+      "name": "Apache License, Version 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0 "
+    }
+  ],
+  "homepage": "http://ycode.com/Tanya/spreadsheet/main.html"
+}
