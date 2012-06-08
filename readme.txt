@@ -67,3 +67,12 @@ $.fn.spreadsheet( options )
   
   // return 2-dimensional array of data in the spreadsheet
   $.fn.getData()
+
+/*
+ * Keyboard interaction
+ */
+Ctrl + C			Copy
+Ctrl + X			Cut
+Ctrl + V			Paste
+Enter on editable cell		Saves the contents of a cell and removes the edit mode
+Tab / Shift + Tab		Navigates between cells, rows, and columns

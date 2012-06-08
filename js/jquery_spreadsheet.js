@@ -140,7 +140,8 @@ $.fn.spreadsheet = function ( options )
         oCell.addClass( "sp_selected" );  
       } );
   
-      // keypress
+      // keypress - doesn't work on IE and Chrome
+      /*
        oDiv.keypress( function ( event ) { 
         if ( event.ctrlKey ) {
           if ( ( event.which == 67 ) || ( event.which == 99 ) ) {   // Ctrl + C
@@ -153,12 +154,27 @@ $.fn.spreadsheet = function ( options )
           }
         }
       } );
+      */
       
       oDiv.keydown( function ( event ) {    // keypress doesn't capture non-character keys
         if ( event.which == 9 ) {
           nextCell( oTable, event.shiftKey );
           event.preventDefault();
         }
+        if ( event.ctrlKey ) {
+          if ( ( event.which == 67 ) || ( event.which == 99 ) ) {   // Ctrl + C
+            doMenuAction( oTable, "Copy" );
+            oTable.focus();
+          }
+          if ( ( event.which == 86 ) || ( event.which == 118 ) ) {   // Ctrl + V
+            doMenuAction( oTable, "Paste" );
+            oTable.focus();
+          }
+        }
+          if ( ( event.which == 88 ) || ( event.which == 120 ) ) {   // Ctrl + X
+            doMenuAction( oTable, "Cut" );
+            oTable.focus();
+          }
       } );
       
       // right mouse click
